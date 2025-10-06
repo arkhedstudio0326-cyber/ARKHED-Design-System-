@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+}
+
+body {
+  background-color: #19192e;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #041642;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  color: #fff;
+  font-weight: 700;
+}
+
+nav a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #003e91;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+
+.glass-container {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 20px 30px;
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 40px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+input, textarea, select {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: #002063;
+  color: #fff;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn-main {
+  background-color: #003e91;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+}
+
+.btn-main:hover {
+  box-shadow: 0 0 10px #003e91;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid #003e91;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-outline:hover {
+  background-color: rgba(0, 62, 145, 0.3);
+}
+
+#result {
+  margin-top: 20px;
+}
+
+#output {
+  background-color: #002063;
+  padding: 15px;
+  border-radius: 8px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.hidden {
+  display: none;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #041642;
+  color: #888;
+}

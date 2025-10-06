@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VEO 3 Prompt Generator</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>VEO 3 Prompt Generator</h1>
+    <nav>
+      <a href="#" id="home-link">Home</a>
+      <a href="#" id="history-link">History</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="form-section" class="glass-container">
+      <form id="prompt-form">
+        <div class="form-group">
+          <label>Judul Scene</label>
+          <input type="text" id="judulScene" placeholder="Masukkan judul scene" required />
+        </div>
+
+        <div class="form-group">
+          <label>Deskripsi Karakter Inti</label>
+          <textarea id="deskripsiKarakter" placeholder="Deskripsi karakter inti"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Detail Suara Karakter</label>
+          <input type="text" id="suaraKarakter" placeholder="Contoh: lembut, berat, misterius" />
+        </div>
+
+        <div class="form-group">
+          <label>Aksi Karakter</label>
+          <textarea id="aksiKarakter" placeholder="Contoh: berjalan pelan, tersenyum samar"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Ekspresi Karakter</label>
+          <input type="text" id="ekspresiKarakter" placeholder="Contoh: bahagia, tegang, sedih" />
+        </div>
+
+        <div class="form-group">
+          <label>Latar Tempat & Waktu</label>
+          <input type="text" id="latar" placeholder="Contoh: taman kota sore hari" />
+        </div>
+
+        <div class="form-group">
+          <label>Detail Visual Tambahan</label>
+          <textarea id="detailVisual" placeholder="Tambahkan detail visual tambahan di sini"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Gerakan Kamera</label>
+          <select id="gerakanKamera">
+            <option value="Static">Static (Statis)</option>
+            <option value="Zoom In">Zoom In (Perbesar)</option>
+            <option value="Zoom Out">Zoom Out (Perkecil)</option>
+            <option value="Pan Left">Pan Left (Geser Kiri)</option>
+            <option value="Pan Right">Pan Right (Geser Kanan)</option>
+            <option value="Tilt Up">Tilt Up (Miring ke Atas)</option>
+            <option value="Tilt Down">Tilt Down (Miring ke Bawah)</option>
+            <option value="Dolly In">Dolly In (Maju)</option>
+            <option value="Dolly Out">Dolly Out (Mundur)</option>
+            <option value="Orbit">Orbit (Rotasi 3D)</option>
+            <option value="Crane Up">Crane Up (Naik)</option>
+            <option value="Crane Down">Crane Down (Turun)</option>
+            <option value="Tracking Shot">Tracking Shot (Mengikuti)</option>
+            <option value="Handheld/Shaky">Handheld/Shaky (Goyang)</option>
+            <option value="Roll Left">Roll Left (Putar Kiri)</option>
+            <option value="Roll Right">Roll Right (Putar Kanan)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Suasana Keseluruhan</label>
+          <input type="text" id="suasana" placeholder="Contoh: tenang, tegang, misterius" />
+        </div>
+
+        <div class="form-group">
+          <label>Suara Lingkungan / Ambience</label>
+          <input type="text" id="ambience" placeholder="Contoh: angin sepoi, riuh kota" />
+        </div>
+
+        <div class="form-group">
+          <label>Dialog Karakter</label>
+          <textarea id="dialog" placeholder="Masukkan dialog karakter (bahasa Indonesia)"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Negative Prompt</label>
+          <input type="text" id="negative" placeholder="Hal yang ingin dihindari" />
+        </div>
+
+        <div class="button-group">
+          <button type="button" id="generateBtn" class="btn-main">Generate Prompt</button>
+          <button type="button" id="copyBtn" class="btn-outline">Copy</button>
+        </div>
+      </form>
+
+      <div id="result">
+        <h3>Hasil Prompt</h3>
+        <pre id="output"></pre>
+      </div>
+    </section>
+
+    <section id="history-section" class="glass-container hidden">
+      <h3>History</h3>
+      <ul id="historyList"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Powered by © ARKHED Design System</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
